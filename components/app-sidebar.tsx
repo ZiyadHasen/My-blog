@@ -1,175 +1,160 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
-  Map,
-  PieChart,
-  Settings2,
-  SquareTerminal,
-} from "lucide-react"
+import * as React from "react";
+import { BookOpen, Database } from "lucide-react";
+import { FaReact } from "react-icons/fa";
+import { SiCsswizardry } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
+import { BiLogoTypescript } from "react-icons/bi";
 
-import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
-import { NavUser } from "@/components/nav-user"
-import { TeamSwitcher } from "@/components/team-switcher"
+import { NavMain } from "@/components/nav-main";
+import { NavUser } from "@/components/nav-user";
+import TeamSwitcher from "@/components/team-switcher";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
-} from "@/components/ui/sidebar"
+} from "@/components/ui/sidebar";
 
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
+    name: "Ziyad Hasen",
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
-  teams: [
-    {
-      name: "Acme Inc",
-      logo: GalleryVerticalEnd,
-      plan: "Enterprise",
-    },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
-  ],
+
   navMain: [
     {
-      title: "Playground",
+      title: "Getting started",
       url: "#",
-      icon: SquareTerminal,
+      icon: BookOpen,
       isActive: true,
       items: [
         {
-          title: "History",
+          title: "What to expect",
           url: "#",
         },
         {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
+          title: "key considerations",
           url: "#",
         },
       ],
     },
     {
-      title: "Models",
+      title: "React",
       url: "#",
-      icon: Bot,
+      icon: FaReact,
+      // isActive: true,
       items: [
         {
-          title: "Genesis",
+          title: "Introduction to React",
           url: "#",
         },
         {
-          title: "Explorer",
+          title: "React Basics",
           url: "#",
         },
         {
-          title: "Quantum",
+          title: "Advanced React",
           url: "#",
         },
       ],
     },
     {
-      title: "Documentation",
+      title: "CSS",
       url: "#",
-      icon: BookOpen,
+      icon: SiCsswizardry,
       items: [
         {
-          title: "Introduction",
+          title: "CSS Basics",
           url: "#",
         },
         {
-          title: "Get Started",
+          title: "Flexbox",
           url: "#",
         },
         {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
+          title: "Grid",
           url: "#",
         },
       ],
     },
     {
-      title: "Settings",
+      title: "Next.js",
       url: "#",
-      icon: Settings2,
+      icon: RiNextjsFill,
       items: [
         {
-          title: "General",
+          title: "Introduction to Next.js",
           url: "#",
         },
         {
-          title: "Team",
+          title: "Next.js Routing",
           url: "#",
         },
         {
-          title: "Billing",
+          title: "Next.js API Routes",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "TypeScript",
+      url: "#",
+      icon: BiLogoTypescript,
+      items: [
+        {
+          title: "Introduction to TypeScript",
           url: "#",
         },
         {
-          title: "Limits",
+          title: "TypeScript Basics",
+          url: "#",
+        },
+        {
+          title: "Advanced TypeScript",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Learning SQL",
+      url: "#",
+      icon: Database,
+      items: [
+        {
+          title: "SQL Basics",
+          url: "#",
+        },
+        {
+          title: "Advanced SQL",
+          url: "#",
+        },
+        {
+          title: "SQL Performance Tuning",
           url: "#",
         },
       ],
     },
   ],
-  projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
-    },
-    {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
-    },
-    {
-      name: "Travel",
-      url: "#",
-      icon: Map,
-    },
-  ],
-}
+};
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <TeamSwitcher teams={data.teams} />
+        <TeamSwitcher />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
-  )
+  );
 }

@@ -3,14 +3,16 @@ import { Twitter, Github, Linkedin, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="w-full py-5 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+    <footer className="w-full py-[6rem] bg-gray-100">
+      <div className="flex flex-col px-[2rem] sm:px-[4rem] gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-200 pb-4 gap-4">
           {/* Left section */}
-          <div className="text-xl font-semibold">Blogs</div>
+          <div className="text-xl font-semibold mb-4 md:mb-0 md:flex-1 text-center md:text-left">
+            Blogs
+          </div>
 
           {/* Middle section */}
-          <nav className="flex gap-6">
+          <nav className="flex gap-6 mb-4 md:mb-0 flex-wrap justify-center md:justify-center md:flex-1">
             <Link
               href="/about"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -32,7 +34,7 @@ export function Footer() {
           </nav>
 
           {/* Right section - Social Links */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 justify-center md:justify-end md:flex-1">
             <Link
               href="https://twitter.com"
               target="_blank"
@@ -72,9 +74,12 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom text */}
-        <div className="text-center mt-8 text-sm text-muted-foreground">
-          Designed & Developed by Zeon Studio
+        <div className="flex items-center justify-center">
+          <div className="flex-1"></div>
+          <div className="text-center text-sm text-muted-foreground py-3">
+            Designed & Developed by Zeon Studio
+          </div>
+          <div className="flex-1"></div>
         </div>
       </div>
     </footer>

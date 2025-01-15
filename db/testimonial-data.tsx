@@ -5,7 +5,7 @@ export const testimonials = [
     role: "Software Engineer",
   },
   {
-    text: "A game-changer in my workflow. Simple and effective. The features are well thought out and cater to all my needs. I have been able to streamline my processes and save a lot of time thanks to this product.",
+    text: "A game-changer in my workflow. Simple and effective. The features are well thought out and  cater to all my needs. I have been able to streamline my processes and save a lot of time thanks to this product.",
     name: "Jane Smith",
     role: "Product Manager",
   },

@@ -3,11 +3,11 @@ import { Twitter, Github, Linkedin, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="w-full py-[6rem] bg-gray-100">
+    <footer className="w-full py-[6rem] bg-gray-100 dark:bg-gray-900">
       <div className="flex flex-col px-[2rem] sm:px-[4rem] gap-6">
-        <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-200 pb-4 gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-200 dark:border-gray-700 pb-4 gap-4">
           {/* Left section */}
-          <div className="text-xl font-semibold mb-4 md:mb-0 md:flex-1 text-center md:text-left">
+          <div className="text-xl font-semibold mb-4 md:mb-0 md:flex-1 text-center md:text-left text-gray-800 dark:text-gray-200">
             Blogs
           </div>
 
@@ -15,19 +15,19 @@ export function Footer() {
           <nav className="flex gap-6 mb-4 md:mb-0 flex-wrap justify-center md:justify-center md:flex-1">
             <Link
               href="/about"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors dark:text-gray-300 dark:hover:text-white"
             >
               About
             </Link>
             <Link
               href="/blogs"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors dark:text-gray-300 dark:hover:text-white"
             >
               Blogs
             </Link>
             <Link
               href="/contact"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors dark:text-gray-300 dark:hover:text-white"
             >
               Contact me
             </Link>
@@ -76,7 +76,7 @@ export function Footer() {
 
         <div className="flex items-center justify-center">
           <div className="flex-1"></div>
-          <div className="text-center text-sm text-muted-foreground py-3">
+          <div className="text-center text-sm text-muted-foreground py-3 text-gray-800 dark:text-gray-400">
             Designed & Developed by Zeon Studio
           </div>
           <div className="flex-1"></div>

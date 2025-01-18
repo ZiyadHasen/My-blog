@@ -26,21 +26,22 @@ const data = {
   },
 
   navMain: [
-    {
-      title: "Getting started",
-      url: "/blog/react",
-      icon: BookOpen,
-      isActive: true,
-      items: [
-        { title: "What to expect", url: "/blog/react/introduction" },
-        { title: "key considerations", url: "/blog/react/basics" },
-        { title: "advanced concepts", url: "/blog/react/advanced" },
-      ],
-    },
+    // {
+    //   title: "Getting started",
+    //   url: "/blog/react",
+    //   icon: BookOpen,
+    //   isActive: true,
+    //   items: [
+    //     { title: "What to expect", url: "/blog/react/introduction" },
+    //     { title: "key considerations", url: "/blog/react/basics" },
+    //     { title: "advanced concepts", url: "/blog/react/advanced" },
+    //   ],
+    // },
     {
       title: "React",
       url: "/blog/react",
       icon: FaReact,
+      isActive: true,
       items: [
         { title: "Introduction to React", url: "/blog/react/introduction" },
         { title: "React Basics", url: "/blog/react/basics" },

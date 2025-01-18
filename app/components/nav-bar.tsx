@@ -9,7 +9,7 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // To toggle the mobile menu
 
   return (
-    <nav className="sticky top-0 z-50 flex items-center pt-4 justify-between px-4 sm:px-8 md:px-12 lg:px-24 xl:px-32 bg-background border-b h-[80px]">
+    <nav className="sticky top-0 z-50 flex items-center pt-4 justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-24 bg-background border-b h-[80px]">
       <Link href="/" className="text-2xl font-bold">
         Ziyad Hasen
       </Link>

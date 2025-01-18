@@ -9,9 +9,9 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // To toggle the mobile menu
 
   return (
-    <nav className="sticky top-0 z-50 flex items-center pt-4 justify-between px-6 bg-background border-b h-[80px]">
+    <nav className="sticky top-0 z-50 flex items-center pt-4 justify-between px-4 sm:px-8 md:px-12 lg:px-24 xl:px-32 bg-background border-b h-[80px]">
       <Link href="/" className="text-2xl font-bold">
-        Your Name
+        Ziyad Hasen
       </Link>
 
       {/* Desktop & Tablet Navigation Links */}
@@ -31,12 +31,6 @@ export function Navbar() {
       <div className="flex items-center space-x-4 sm:space-x-6 md:space-x-8">
         {/* Adjusted spacing for mobile to desktop */}
         <ModeToggleWrapper />
-        <Link
-          href="/contact"
-          className="hover:bg-slate-300 dark:hover:bg-slate-700 border border-black dark:border-white bg-white dark:bg-black px-3 py-1 rounded"
-        >
-          Contact Me
-        </Link>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">

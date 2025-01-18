@@ -3,7 +3,7 @@ import { Twitter, Github, Linkedin, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="w-full py-[6rem] bg-gray-100 dark:bg-gray-900">
+    <footer className="w-full py-[3rem] bg-gray-100 dark:bg-gray-900">
       <div className="flex flex-col px-[2rem] sm:px-[4rem] gap-6">
         <div className="flex flex-col md:flex-row justify-between items-center border-b border-gray-200 dark:border-gray-700 pb-4 gap-4">
           {/* Left section */}

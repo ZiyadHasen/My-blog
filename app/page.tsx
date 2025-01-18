@@ -1,17 +1,15 @@
-import Link from "next/link";
-import { Navbar } from "./components/nav-bar";
-import { Footer } from "./components/footer";
-import { Testimonials } from "./components/testimonials";
-import { Button } from "@/components/ui/button";
 import Container from "@/app/components/container";
-import AboutTopics from "./components/about-topics";
+import { Button } from "@/components/ui/button";
 import image from "@/public/Image/image.svg";
 import Image from "next/image";
+import Link from "next/link";
+import AboutTopics from "./components/about-topics";
+import { Testimonials } from "./components/testimonials";
+import { Footer } from "./components/footer";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
       <Container>
         <main className="flex-grow pt-16">
           <section className="mb-12 text-center">
@@ -27,13 +25,7 @@ export default function Home() {
           </section>
           <section className="flex justify-center items-center my-8">
             <div className="w-full max-w-xs sm:max-w-sm md:max-w-xs lg:max-w-sm xl:max-w-md">
-              <Image
-                src={image}
-                alt="Blog illustration"
-                layout="responsive"
-                // width={300}
-                // height={150}
-              />
+              <Image src={image} alt="Blog illustration" layout="responsive" />
             </div>
           </section>
 
